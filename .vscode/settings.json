@@ -1,0 +1,18 @@
+{
+    "files.exclude": {
+        "**/.git": true,
+        "**/.svn": true,
+        "**/.hg": true,
+        "**/CVS": true,
+        "**/.DS_Store": true,
+        "**/Thumbs.db": true,
+        "534F52A942FA1C4531D9B262DE3FB647936FB144554D.ico": true,
+        "Desktop.ini": true,
+        ".vscode": true
+    },
+    "hide-files.files": [
+        "534F52A942FA1C4531D9B262DE3FB647936FB144554D.ico",
+        "Desktop.ini",
+        ".vscode"
+    ]
+}

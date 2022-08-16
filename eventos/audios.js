@@ -1,0 +1,1 @@
+var gritoCorvo = new Audio('audios/corvoGrito.mp3');
