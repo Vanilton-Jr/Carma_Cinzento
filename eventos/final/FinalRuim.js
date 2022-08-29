@@ -1,5 +1,6 @@
 function Final2(){
     deselicionar()
+
 txt1.innerHTML = "EI! Você... você matou aquele corvo?";
 txt2.innerHTML = "Graças a Deus!";
 txt3.innerHTML = "Esse corvo na verdade era um necromante disfarçado,";
@@ -10,9 +11,23 @@ txt7.innerHTML = "*Você ouve o sons de um corvo ao longe, medo e terror se espa
 
 tela.style.backgroundImage = "url(imgs/finalRuim.png)";
 const myTimeout7 = setTimeout(mudarFoto, 2000);
+const myTimeout99 = setTimeout(Restart, 3000);
+
+document.onkeydown = function (e) {
+
+    switch (e.keyCode) {
+        case 49:
+            break;
+
+        case 50:
+            break;
+    }
+};
 
 }
+
 function mudarFoto(){
     tela.style.backgroundImage = "url(imgs/finalRuim2.png)";
     gritoCorvo.play();
 }
+

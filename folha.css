@@ -7,7 +7,7 @@ body {
 
 @font-face {
     font-family: retro;
-    src: url(fontes/joystix\ monospace.otf);
+    src: url(fonts/joystix_monospace.otf);
   }
 
 @media screen and (max-width: 1530px) {
@@ -23,9 +23,29 @@ body {
     }
 }
 
+#restart{
+    position: absolute;
+    width: 20vw;
+    height: 10vw;
+    top: 10vw;
+    left: 37%;
+    cursor: pointer;
+    z-index: 3;
+    background-color: rgb(94, 72, 115);
+    color: aliceblue;
+    font-size: larger;
+    text-align: center;
+    font-display: column;
+    transform: translateY(-50%);
+}
+
+#restarText{
+    transform: translateY(-50%);
+}
+
 .barra {
     position: absolute;
-    height: 2vw;
+    height: 1.8vw;
     width: 96%;
     background-color: black;
     right: 0;
@@ -44,11 +64,11 @@ body {
     border: 3px solid grey;
     text-align: left;
     padding-left: 4vw;
-    font-size: 0.7em;
+    font-size: 1em;
     margin-top: 1vw;
     height: 20vw;
     width: 75vw;
-    margin-left: 10vw;
+    margin-left: 9vw;
 }
 
 #tela{
@@ -58,7 +78,7 @@ body {
     font-size: 0.7em;
     height: 30vw;
     width: 80vw;
-    margin-left: 7vw;
+    margin-left: 8.5vw;
     background-repeat: no-repeat;
 }
 #te
@@ -69,12 +89,16 @@ body {
 
 .texto{
     border: 1px solid black;
-    height: 2vw;
+    height: 1.8vw;
     width: 100%;
     margin-left: -2vw;
-    margin-top: 0vw;
+    margin-top: 0.1vw;
 }
 
 .selecionado{
     border: 1px solid rgb(16, 230, 105);
+}
+
+.hide{
+    visibility: hidden;
 }

@@ -5,15 +5,17 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script type='text/javascript' src="eventos/Cenas.js"></script>
+    <script type='text/javascript' src="eventos/Sistema/cenas.js"></script>
     <link rel="stylesheet" id="folha" type="text/CSS" href="folha.css">
 
-    <title>Document</title>
+    <title>Carma Cinzento</title>
 </head>
 
 <body>
-    <div id="tela">
+    <div id="conquista"> </div>
 
+    <div id="tela">
+        
     </div>
     <div id="caixaDeDialogo">
         <p class="texto" id="txt1"> </p>
@@ -39,17 +41,12 @@
         <div id="b7" class="barra"></div>
     </div>
 
-    <button onclick="exporTexto()" id="test"></button>
-    <button onclick="exporTexto()" id="test2"></button>
-    <button onclick="exporTexto()" id="test5"></button>
-    <button onclick="exporTexto()" id="test4"></button>
+    <button onclick="exporTexto()" id="test"  class="hide"></button>
+    <button onclick="exporTexto()" id="test2" class="hide"></button>
+    <button onclick="exporTexto()" id="test5" class="hide"></button>
+    <button onclick="exporTexto()" id="test4" class="hide"></button>
 
-    <input type="button" value="Reload Page" onClick="document.location.reload(true)">
-
-
-
-
-
+    <div id="restart" onClick="document.location.reload(true)" class="hide"><p id="-"> Retorne ao Começo </p></div>
 
     <script>
         var tela = document.getElementById("tela");
@@ -154,6 +151,13 @@
         }
 
 
+        // Restart
+        function Restart(){
+            var restt = document.getElementById("restart");
+
+            restt.style.visibility = "visible";
+        }
+
         // CENAS E ESCOLHAS
 
 
@@ -165,7 +169,6 @@
         function passe() {
             window['Cena']++;
             passarCena();
-            esconderTexto();
         }
         exporTexto();
 
@@ -217,9 +220,16 @@
             if (Cena == 1) {
                 Cena1()
             }
+
             if (Cena == 2) {
-                Cena2()
+                if (Ecorvo == 3) {
+                    Morte();
+                }
+                else{
+                    Cena2()
+                }
             }
+            
             if (Cena == 3) {
                 if (Ecorvo == 1 && EPA == 1) {
                     Final1();

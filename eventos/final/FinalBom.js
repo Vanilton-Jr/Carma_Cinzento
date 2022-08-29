@@ -10,6 +10,17 @@ txt7.innerHTML = "*Você recebeu 4 NFTs*";
 
 tela.style.backgroundImage = "url(imgs/finalBom.png)";
 const myTimeout7 = setTimeout(mudarFoto1, 2000);
+const myTimeout99 = setTimeout(Restart, 3000);
+document.onkeydown = function (e) {
+
+    switch (e.keyCode) {
+        case 49:
+            break;
+
+        case 50:
+            break;
+    }
+};
 
 }
 function mudarFoto1(){

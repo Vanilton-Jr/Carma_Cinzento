@@ -9,4 +9,6 @@ function Final3(){
     txt7.innerHTML = "";
 
 tela.style.backgroundImage = "url(imgs/finalMhé.png)";
+const myTimeout99 = setTimeout(Restart, 3000);
+
 }

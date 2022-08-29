@@ -6,3 +6,4 @@ document.writeln("<script type='text/javascript' src='eventos/FinalBom.js'></scr
 document.writeln("<script type='text/javascript' src='eventos/FinalRuim.js'></script>");
 document.writeln("<script type='text/javascript' src='eventos/FinalBruh.js'></script>");
 document.writeln("<script type='text/javascript' src='eventos/FinalMeh.js'></script>");
+document.writeln("<script type='text/javascript' src='eventos/morte.js'></script>");

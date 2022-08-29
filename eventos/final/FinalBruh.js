@@ -9,4 +9,6 @@ txt6.innerHTML = "";
 txt7.innerHTML = "";
 
 tela.style.backgroundImage = "url(imgs/finalBruh.png)";
+const myTimeout99 = setTimeout(Restart, 3000);
+
 }
