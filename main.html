@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type='text/javascript' src="Cenas/Sistema/cenas.js"></script>
+    <link rel="stylesheet" id="folha" type="text/CSS" href="folha.css">
+
+    <title>Carma Cinzento</title>
+</head>
+
+<body>
+    <div id="curtina"></div>
+    <div id="conquista"> </div>
+
+    <div id="tela">
+        
+    </div>
+    <div id="caixaDeDialogo">
+        <p class="texto" id="txt1"> </p>
+        <div id="b1" class="barra"></div>
+
+
+        <p class="texto" id="txt2"> </p>
+        <div id="b2" class="barra"></div>
+
+        <p class="texto" id="txt3"></p>
+        <div id="b3" class="barra"></div>
+
+        <p class="texto" id="txt4"> 1. NÃO </p>
+        <div id="b4" class="barra"></div>
+
+        <p class="texto" id="txt5"> 2.COMEÇER? </p>
+        <div id="b5" class="barra"></div>
+
+        <p class="texto" id="txt6"></p>
+        <div id="b6" class="barra"></div>
+
+        <p class="texto" id="txt7"></p>
+        <div id="b7" class="barra"></div>
+    </div>
+
+    <button onclick="exporTexto()" id="test"  class="hide"></button>
+    <button onclick="exporTexto()" id="test2" class="hide"></button>
+    <button onclick="exporTexto()" id="test5" class="hide"></button>
+    <button onclick="exporTexto()" id="test4" class="hide"></button>
+
+    <div id="restart" onClick="document.location.reload(true)" class="hide"><p id="-"> Retorne ao Começo </p></div>
+
+    <script>
+        var tela = document.getElementById("tela");
+
+        var txt1 = document.getElementById("txt1");
+        var txt2 = document.getElementById("txt2");
+        var txt3 = document.getElementById("txt3");
+        var txt4 = document.getElementById("txt4");
+        var txt5 = document.getElementById("txt5");
+        var txt6 = document.getElementById("txt6");
+        var txt7 = document.getElementById("txt7");
+
+        let txtL1 = txt1.innerHTML.length;
+        let txtL2 = txt2.innerHTML.length;
+        let txtL3 = txt3.innerHTML.length;
+        let txtL4 = txt4.innerHTML.length;
+        let txtL5 = txt5.innerHTML.length;
+        let txtL6 = txt6.innerHTML.length;
+        let txtL7 = txt6.innerHTML.length;
+
+
+
+        let length = txt1.innerHTML.length;
+
+        document.getElementById("test").innerHTML = "ativar";
+
+        var b1 = document.getElementById("b1");
+        var b2 = document.getElementById("b2");
+        var b3 = document.getElementById("b3");
+        var b4 = document.getElementById("b4");
+        var b5 = document.getElementById("b5");
+        var b6 = document.getElementById("b6");
+        var b7 = document.getElementById("b7");
+
+        function exporTexto() {
+            const myTimeout1 = setTimeout(ba1, 100);
+            const myTimeout2 = setTimeout(ba2, txtL1 * 30);
+            const myTimeout3 = setTimeout(ba3, (txtL1 + txtL2) * 30);
+            const myTimeout4 = setTimeout(ba4, (txtL1 + txtL2 + txtL3) * 30);
+            const myTimeout5 = setTimeout(ba5, (txtL1 + txtL2 + txtL3 + txtL4) * 30);
+            const myTimeout6 = setTimeout(ba6, (txtL1 + txtL2 + txtL3 + txtL4 + txtL5) * 30);
+            const myTimeout7 = setTimeout(ba7, (txtL1 + txtL2 + txtL3 + txtL4 + txtL5 + txtL6) * 30);
+
+            b1.style.transition = "5s";
+            b2.style.transition = "5s";
+            b3.style.transition = "5s";
+            b4.style.transition = "5s";
+            b5.style.transition = "5s";
+            b6.style.transition = "5s";
+            b7.style.transition = "5s";
+        }
+
+        function esconderTexto() {
+            b1.style.width = "96%";
+            b2.style.width = "96%";
+            b3.style.width = "96%";
+            b4.style.width = "96%";
+            b5.style.width = "96%";
+            b6.style.width = "96%";
+            b7.style.width = "96%";
+
+            b1.style.transition = "0s";
+            b2.style.transition = "0s";
+            b3.style.transition = "0s";
+            b4.style.transition = "0s";
+            b5.style.transition = "0s";
+            b6.style.transition = "0s";
+            b7.style.transition = "0s";
+        }
+
+
+        function ba1() {
+            b1.style.width = "0px"
+        };
+
+        function ba2() {
+            b2.style.width = "0px"
+        };
+
+        function ba3() {
+            b3.style.width = "0px"
+        };
+
+        function ba4() {
+            b4.style.width = "0px"
+        };
+
+        function ba5() {
+            b5.style.width = "0px"
+        };
+
+        function ba6() {
+            b6.style.width = "0px"
+        };
+
+        function ba7() {
+            b7.style.width = "0px"
+        };
+
+        function deselicionar() {
+            txt1.classList.remove("selecionado");
+            txt2.classList.remove("selecionado");
+            txt3.classList.remove("selecionado");
+            txt4.classList.remove("selecionado");
+            txt5.classList.remove("selecionado");
+            txt6.classList.remove("selecionado");
+            txt7.classList.remove("selecionado");
+        }
+        function selecionar(n) {
+            deselicionar()
+
+            var txt = document.getElementById(`txt${n}`);
+            txt.classList.add("selecionado")
+        }
+
+        function mudarFolha(foia) {
+            var folha = document.getElementById("folha");
+            folha.setAttribute("href", foia);
+        }
+
+
+        // Restart
+        function Restart(){
+            var restt = document.getElementById("restart");
+
+            restt.style.visibility = "visible";
+        }
+
+        // ----------------------------------------- CENAS E ESCOLHAS -----------------------------------------
+        var Cena = 0;
+        var chave = 0;
+
+        // Chaves
+        var Econfronto = 0;
+        var Eenterre  = 0;
+        var Egaveta    = 0;
+        var Ecorvo     = 0;
+        var EPA        = 0;
+
+        function passe() {
+            window['Cena']++;
+            passarCena();
+            deselicionar();
+        }
+
+        // adicionar função permissão a tecla 4
+        document.onkeyup = function (e) {
+            if (e.keyCode == 13) {
+                Permissao();
+                document.getElementById("test2").innerHTML = chave;
+            };
+        }
+
+
+        function Permissao() {
+            if (chave == 2) {
+                passe();
+                document.getElementById("test2").innerHTML = chave;
+            }
+
+            else {
+                document.getElementById("test2").innerHTML = chave;
+            }
+        }
+
+        document.getElementById("test2").innerHTML = chave;
+        document.getElementById("test5").innerHTML = Ecorvo;
+        document.getElementById("test4").innerHTML = EPA;
+        document.onkeydown = function (e) {
+            switch (e.keyCode) {
+                case 49:
+                    window['chave'] = 2;
+                    selecionar(4);
+                    break;
+                case 50:
+                    window['chave'] = 2;
+                    selecionar(5);
+                    break;
+                case 13:
+                   
+                    break;
+            }
+        };
+
+   // ----------------------------------------- CENAS -----------------------------------------
+        function passarCena() {
+            if (Cena == 1) {
+                EventoCorvo()
+            }
+
+            if (Cena == 2) {
+                if (Ecorvo == 3) {
+                    Morte();
+                }
+                else{
+                    EventoPa()
+                }
+            }
+            
+            if (Cena == 3) {
+                if (Ecorvo == 1 && EPA == 1) {
+                    Final1();
+                }
+                if (Ecorvo == 1 && EPA == 2) {
+                    Final2();
+                }
+                if (Ecorvo == 2 && EPA == 1) {
+                    Final3();
+                }
+                if (Ecorvo == 2 && EPA == 2) {
+                    Final4();
+                }
+            }
+        }
+
+
+    </script>
+</body>
+
+</html>
