@@ -8,7 +8,7 @@ function Final3(){
     txt6.innerHTML = "";
     txt7.innerHTML = "";
 
-tela.style.backgroundImage = "url(imgs/finalMhé.png)";
+tela.style.backgroundImage = "url(assets/imgs/finalMhé.png)";
 const myTimeout99 = setTimeout(Restart, 3000);
 
 }

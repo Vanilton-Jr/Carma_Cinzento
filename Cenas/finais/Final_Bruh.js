@@ -8,7 +8,7 @@ txt5.innerHTML = "Isso que dar ser hetero";
 txt6.innerHTML = "";
 txt7.innerHTML = "";
 
-tela.style.backgroundImage = "url(imgs/finalBruh.png)";
+tela.style.backgroundImage = "url(assets/imgs/finalBruh.png)";
 const myTimeout99 = setTimeout(Restart, 3000);
 
 }

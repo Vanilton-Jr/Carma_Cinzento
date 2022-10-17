@@ -1,4 +1,4 @@
-function Film_ID(){
+function Film_Jornal(){
     deselicionar()
 txt1.innerHTML = "Um jornal...";
 txt2.innerHTML = "";
@@ -8,5 +8,5 @@ txt5.innerHTML = "";
 txt6.innerHTML = "";
 txt7.innerHTML = "";
 
-tela.style.backgroundImage = "url(imgs/blank.png)";
+tela.style.backgroundImage = "url(assets/imgs/blank.png)";
 }

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="intro.css">
+    <title>Animação</title>
+</head>
+<body onload="intro()">
+    <div id="quadro">
+        <img src="assets/imgs/intro/borda.png" alt="" id="borda">
+        <img src="assets/imgs/intro/seta.png" alt="" id="seta">
+        <div id="ex"></div>
+        <div id="non_cont">
+            <div id="non_bar"></div>
+            <img src="assets/imgs/intro/non.png" alt="" id="non">
+        </div>
+        <div id="specificae_cont">
+            <div id="specificae_bar"></div>
+            <img src="assets/imgs/intro/specificae.png" alt="" id="specificae">
+        </div>
+        <div id="l" class="linha"></div>
+        <div id="r" class="linha"></div>
+    </div>
+
+    <div id="curtina"></div>
+</body>
+<script>
+ function intro(){
+     setTimeout(function(){ window.location.href = "index.html"; }, 7000); 
+    } 
+ </script>
+</html>

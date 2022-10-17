@@ -9,7 +9,7 @@ txt5.innerHTML = "Muito obri-...";
 txt6.innerHTML = "Onde esta a pá? A pá era a fonte de seu poder que o permitia se ressucitar...";
 txt7.innerHTML = "*Você ouve o sons de um corvo ao longe, medo e terror se espalham pelo seu coração*";
 
-tela.style.backgroundImage = "url(imgs/finalRuim.png)";
+tela.style.backgroundImage = "url(assets/imgs/finalRuim.png)";
 const myTimeout7 = setTimeout(mudarFoto, 2000);
 const myTimeout99 = setTimeout(Restart, 3000);
 
@@ -27,7 +27,7 @@ document.onkeydown = function (e) {
 }
 
 function mudarFoto(){
-    tela.style.backgroundImage = "url(imgs/finalRuim2.png)";
+    tela.style.backgroundImage = "url(assets/imgs/finalRuim2.png)";
     gritoCorvo.play();
 }
 

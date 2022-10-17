@@ -5,13 +5,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script type='text/javascript' src="eventos/Sistema/cenas.js"></script>
+    <script type='text/javascript' src="Cenas/Sistema/cenas.js"></script>
     <link rel="stylesheet" id="folha" type="text/CSS" href="folha.css">
 
     <title>Carma Cinzento</title>
 </head>
 
 <body>
+    <div id="curtina"></div>
     <div id="conquista"> </div>
 
     <div id="tela">
@@ -68,6 +69,7 @@
         let txtL7 = txt6.innerHTML.length;
 
 
+
         let length = txt1.innerHTML.length;
 
         document.getElementById("test").innerHTML = "ativar";
@@ -88,6 +90,14 @@
             const myTimeout5 = setTimeout(ba5, (txtL1 + txtL2 + txtL3 + txtL4) * 30);
             const myTimeout6 = setTimeout(ba6, (txtL1 + txtL2 + txtL3 + txtL4 + txtL5) * 30);
             const myTimeout7 = setTimeout(ba7, (txtL1 + txtL2 + txtL3 + txtL4 + txtL5 + txtL6) * 30);
+
+            b1.style.transition = "5s";
+            b2.style.transition = "5s";
+            b3.style.transition = "5s";
+            b4.style.transition = "5s";
+            b5.style.transition = "5s";
+            b6.style.transition = "5s";
+            b7.style.transition = "5s";
         }
 
         function esconderTexto() {
@@ -98,6 +108,14 @@
             b5.style.width = "96%";
             b6.style.width = "96%";
             b7.style.width = "96%";
+
+            b1.style.transition = "0s";
+            b2.style.transition = "0s";
+            b3.style.transition = "0s";
+            b4.style.transition = "0s";
+            b5.style.transition = "0s";
+            b6.style.transition = "0s";
+            b7.style.transition = "0s";
         }
 
 
@@ -110,23 +128,23 @@
         };
 
         function ba3() {
-            b3.style.width = "0"
+            b3.style.width = "0px"
         };
 
         function ba4() {
-            b4.style.width = "0"
+            b4.style.width = "0px"
         };
 
         function ba5() {
-            b5.style.width = "0"
+            b5.style.width = "0px"
         };
 
         function ba6() {
-            b6.style.width = "0"
+            b6.style.width = "0px"
         };
 
         function ba7() {
-            b7.style.width = "0"
+            b7.style.width = "0px"
         };
 
         function deselicionar() {
@@ -158,23 +176,22 @@
             restt.style.visibility = "visible";
         }
 
-        // CENAS E ESCOLHAS
-
-
+        // ----------------------------------------- CENAS E ESCOLHAS -----------------------------------------
         var Cena = 0;
+        var chave = 0;
 
-        var Ecorvo = 0;
-        var EPA = 0;
+        // Chaves
+        var Econfronto = 0;
+        var Eenterre  = 0;
+        var Egaveta    = 0;
+        var Ecorvo     = 0;
+        var EPA        = 0;
 
         function passe() {
             window['Cena']++;
             passarCena();
+            deselicionar();
         }
-        exporTexto();
-
-
-        var chave = 0;
-        var portao = 1;
 
         // adicionar função permissão a tecla 4
         document.onkeyup = function (e) {
@@ -210,15 +227,15 @@
                     selecionar(5);
                     break;
                 case 13:
-                    exporTexto();
+                   
                     break;
             }
         };
 
-
+   // ----------------------------------------- CENAS -----------------------------------------
         function passarCena() {
             if (Cena == 1) {
-                Cena1()
+                EventoCorvo()
             }
 
             if (Cena == 2) {
@@ -226,7 +243,7 @@
                     Morte();
                 }
                 else{
-                    Cena2()
+                    EventoPa()
                 }
             }
             

@@ -9,7 +9,7 @@ txt5.innerHTML = "";
 txt6.innerHTML = "";
 txt7.innerHTML = "";
 
-tela.style.backgroundImage = "url(imgs/morte.png)";
+tela.style.backgroundImage = "url(assets/imgs/morte.png)";
 const myTimeout99 = setTimeout(Restart, 3000);
 
 document.onkeydown = function (e) {

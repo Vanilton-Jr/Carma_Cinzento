@@ -8,7 +8,7 @@ txt5.innerHTML = "E você ainda recuperou minha pá roubada!";
 txt6.innerHTML = "Muito obrigado meu jovem, aqui... tome como reconpensa";
 txt7.innerHTML = "*Você recebeu 4 NFTs*";
 
-tela.style.backgroundImage = "url(imgs/finalBom.png)";
+tela.style.backgroundImage = "url(assets/imgs/finalBom.png)";
 const myTimeout7 = setTimeout(mudarFoto1, 2000);
 const myTimeout99 = setTimeout(Restart, 3000);
 document.onkeydown = function (e) {
@@ -24,5 +24,5 @@ document.onkeydown = function (e) {
 
 }
 function mudarFoto1(){
-    tela.style.backgroundImage = "url(imgs/finalBom2.png)";
+    tela.style.backgroundImage = "url(assets/imgs/finalBom2.png)";
 }
